@@ -1,0 +1,11 @@
+[Unit]
+Description=Go module proxy service
+
+[Service]
+Environment="GO111MODULE=on"
+Environment="GOSUMDB=off"
+Environment="GOPRIVATE=tuzla-git.local"
+ExecStart=/opt/goproxy/goproxy
+
+[Install]
+WantedBy=multi-user.target
